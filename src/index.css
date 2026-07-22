@@ -69,32 +69,76 @@ body {
 
 @layer components {
   header {
-    @apply w-full fixed top-0 left-0 z-50 flex-center bg-black min-h-[7vh];
+    @apply w-full fixed top-0 left-0 z-50 select-none;
 
-    nav {
-      @apply container mx-auto flex-between px-5 2xl:px-0;
+    .global-nav {
+      @apply w-full h-[44px] bg-[#161617]/80 backdrop-blur-md border-b border-white/10 flex items-center;
 
-      img {
-        @apply cursor-pointer hover:-translate-y-0.5 transition-all duration-300 ease-in-out;
+      .nav-container {
+        @apply w-full max-w-[1024px] mx-auto px-4 flex items-center justify-between h-full;
       }
 
-      button {
-        @apply bg-transparent border-none outline-none cursor-pointer p-0 flex-center;
-      }
-
-      .menu-toggle {
-        @apply md:hidden size-6;
+      .logo-link {
+        @apply flex items-center opacity-85 hover:opacity-100 transition-opacity;
 
         img {
-          @apply size-6;
+          @apply h-[22px] w-auto transition-transform duration-200;
         }
       }
 
-      ul {
-        @apply hidden md:flex items-center justify-center gap-8;
+      .nav-list {
+        @apply hidden md:flex items-center justify-between flex-1 mx-8 max-w-[760px];
 
         a {
-          @apply text-white opacity-80 font-regular text-sm cursor-pointer hover:opacity-100 transition-all duration-300 ease-in-out;
+          @apply text-[12px] text-[#f5f5f7]/80 hover:text-white font-normal tracking-tight transition-colors duration-200;
+        }
+      }
+
+      .actions {
+        @apply flex items-center gap-5;
+
+        button {
+          @apply bg-transparent border-none outline-none cursor-pointer opacity-85 hover:opacity-100 transition-opacity p-0 flex items-center justify-center;
+
+          img {
+            @apply h-[20px] w-auto;
+          }
+        }
+
+        .menu-btn {
+          @apply md:hidden;
+
+          img {
+            @apply h-[22px] w-auto;
+          }
+        }
+      }
+    }
+
+    .local-nav {
+      @apply w-full h-[52px] bg-[#161617]/80 backdrop-blur-md border-b border-white/10 flex items-center;
+
+      .local-container {
+        @apply w-full max-w-[1024px] mx-auto px-4 md:px-6 flex items-center justify-between h-full;
+      }
+
+      .product-title {
+        @apply text-[#f5f5f7] font-semibold text-[19px] md:text-[21px] tracking-tight cursor-default;
+      }
+
+      .local-actions {
+        @apply flex items-center gap-4 text-[12px];
+
+        .link-overview {
+          @apply hidden sm:inline-block text-white;
+        }
+
+        .link-specs {
+          @apply hidden sm:inline-block text-[#f5f5f7]/80 hover:text-white transition-colors;
+        }
+
+        .buy-btn {
+          @apply bg-[#0071e3] hover:bg-[#0077ed] text-white text-[12px] px-3.5 py-1 rounded-full font-normal cursor-pointer transition-colors shadow-sm ml-2;
         }
       }
     }
@@ -133,7 +177,7 @@ body {
   }
 
   #hero {
-    @apply h-fit lg:h-[80vh] col-center mt-40 lg:mt-20 2xl:mt-[7vh];
+    @apply h-fit lg:h-[80vh] col-center pt-[96px] mt-10 lg:mt-5;
 
     div {
       @apply relative z-10 col-center lg:translate-y-16;

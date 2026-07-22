@@ -6,34 +6,54 @@ const NavBar = () => {
 
   return (
     <header>
-      <nav>
-        <img src="/logo.svg" alt="Apple logo" />
+      <nav className="global-nav">
+        <div className="nav-container">
+          <a href="#" className="logo-link">
+            <img src="/logo.svg" alt="Apple logo" />
+          </a>
 
-        <ul>
-          {navLinks.map(({ label }) => (
-            <li key={label}>
-              <a href={label}>{label}</a>
-            </li>
-          ))}
-        </ul>
+          <ul className="nav-list">
+            {navLinks.map(({ label, href }) => (
+              <li key={label}>
+                <a href={href}>{label}</a>
+              </li>
+            ))}
+          </ul>
 
-        <div className="flex-center gap-3">
-          <button>
-            <img src="/search.svg" alt="Search" />
-          </button>
-          <button>
-            <img src="/cart.svg" alt="Cart" />
-          </button>
-          <button
-            aria-label="Open navigation menu"
-            className="menu-toggle"
-            type="button"
-            onClick={() => setIsMenuOpen(true)}
-          >
-            <img src="/menu.svg" alt="" aria-hidden="true" />
-          </button>
+          <div className="actions">
+            <button aria-label="Search">
+              <img src="/search.svg" alt="Search" />
+            </button>
+            <button aria-label="Cart">
+              <img src="/cart.svg" alt="Cart" />
+            </button>
+            <button
+              aria-label="Open navigation menu"
+              className="menu-btn"
+              type="button"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <img src="/menu.svg" alt="Menu" />
+            </button>
+          </div>
         </div>
       </nav>
+
+      <div className="local-nav">
+        <div className="local-container">
+          <span className="product-title">MacBook Pro</span>
+
+          <div className="local-actions">
+            <a href="#overview" className="link-overview">
+              Overview
+            </a>
+            <a href="#tech-specs" className="link-specs">
+              Tech Specs
+            </a>
+            <button className="buy-btn">Buy</button>
+          </div>
+        </div>
+      </div>
 
       <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
         <button
@@ -47,9 +67,9 @@ const NavBar = () => {
         </button>
 
         <ul>
-          {navLinks.map(({ label }) => (
+          {navLinks.map(({ label, href }) => (
             <li key={label}>
-              <a href={label} onClick={() => setIsMenuOpen(false)}>
+              <a href={href} onClick={() => setIsMenuOpen(false)}>
                 {label}
               </a>
             </li>
