@@ -39,22 +39,6 @@ const NavBar = () => {
         </div>
       </nav>
 
-      <div className="local-nav">
-        <div className="local-container">
-          <span className="product-title">MacBook Pro</span>
-
-          <div className="local-actions">
-            <a href="#overview" className="link-overview">
-              Overview
-            </a>
-            <a href="#tech-specs" className="link-specs">
-              Tech Specs
-            </a>
-            <button className="buy-btn">Buy</button>
-          </div>
-        </div>
-      </div>
-
       <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
         <button
           aria-label="Close navigation menu"
