@@ -149,7 +149,7 @@ body {
   }
 
   #hero {
-    @apply h-fit lg:h-[80vh] col-center pt-[96px] mt-10 lg:mt-5;
+    @apply h-fit lg:h-[80vh] col-center pt-[96px] mt-10 lg:mt-40;
 
     div {
       @apply relative z-10 col-center lg:translate-y-16;
@@ -168,7 +168,7 @@ body {
     }
 
     button {
-      @apply relative z-10 bg-primary text-white py-2 px-6 mt-10 lg:mt-0 mb-5 rounded-full font-semibold text-lg cursor-pointer hover:bg-white hover:text-black transition-all duration-300 ease-in-out;
+      @apply relative z-10 bg-primary text-white py-1.5 px-4 text-sm sm:py-2 sm:px-6 sm:text-lg mt-10 mb-5 rounded-full font-semibold cursor-pointer hover:bg-white hover:text-black transition-all duration-300 ease-in-out;
     }
 
     p {
@@ -381,8 +381,8 @@ body {
           @apply p-6 sm:p-10 rounded-3xl flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-7 relative;
 
           background: #1d1d1f;
-          background-clip: padding-box; /* !important */
-          border: 3px solid transparent; /* !important */
+          background-clip: padding-box;
+          border: 3px solid transparent;
 
           &::before {
             content: "";
@@ -390,8 +390,8 @@ body {
             position: absolute;
             inset: 0px;
             z-index: -1;
-            margin: -5px; /* !important */
-            border-radius: 24px; /* !important */
+            margin: -5px;
+            border-radius: 24px;
             background: linear-gradient(
               91deg,
               #0096ff 0%,
