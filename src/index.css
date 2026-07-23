@@ -229,10 +229,11 @@ body {
   }
 
   #showcase {
-    @apply section-container relative pt-24 pb-28 lg:pt-32 lg:pb-36;
+    @apply relative w-full mb-24;
 
     .media {
-      @apply relative lg:overflow-hidden;
+      @apply relative w-screen max-w-none overflow-hidden;
+      margin-left: calc(50% - 50vw);
 
       &.m4-lockup {
         @apply flex-center gap-8 sm:gap-14 lg:gap-20;
@@ -247,27 +248,28 @@ body {
       }
 
       video {
-        @apply w-full object-cover object-center;
+        @apply block w-full object-cover object-center;
       }
 
-      .mask {
-        @apply absolute h-full top-0 lg:-top-20 xl:top-0;
+      .showcase-mask {
+        @apply pointer-events-none absolute inset-0;
 
         img {
-          @apply h-full scale-150 lg:scale-100;
-          transform: matrix(80, 0, 0, 80, 0, 0);
+          @apply h-full w-full scale-100 object-cover object-center;
+          transform-origin: center;
+          transform: scale(80);
         }
 
         @media (max-width: 1024px) {
           img {
-            transform: matrix(1, 0, 0, 1, 0, 0);
+            transform: scale(1);
           }
         }
       }
     }
 
-    .content {
-      @apply relative z-10 pt-12 lg:pt-16 bg-black font-semibold text-xl text-dark-100;
+    .showcase-content {
+      @apply relative z-10 px-6 pt-12 lg:pt-16 bg-black font-semibold text-xl text-dark-100;
 
       .wrapper {
         @apply max-w-[820px] mx-auto flex flex-col lg:flex-row justify-center gap-12 lg:gap-20;
