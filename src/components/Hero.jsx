@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section id="hero">
       <div>
-        <h1>MacBook Pro</h1>
+        <h2>MacBook Pro</h2>
         <img src="/title.png" alt="MacBook Title" />
       </div>
 
