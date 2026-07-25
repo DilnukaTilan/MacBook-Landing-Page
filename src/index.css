@@ -187,7 +187,7 @@ body {
       @apply relative z-10 col-center lg:translate-y-8;
 
       h2 {
-        @apply text-white font-semibold text-3xl md:text-5xl lg:text-7xl text-center;
+        @apply text-white font-semibold text-xl md:text-3xl lg:text-5xl text-center;
       }
 
       img {
