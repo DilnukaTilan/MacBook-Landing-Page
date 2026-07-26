@@ -59,27 +59,25 @@ const ModelSwitcher = ({ selectedSize, isMobile }) => {
   }, [showLargeMacbook]);
 
   const controlsConfig = {
+    global: true,
     snap: true,
-    speed: 1,
+    speed: isMobile ? 1.5 : 2,
     zoom: 1,
     azimuth: [-Infinity, Infinity],
-    config: { mass: 1, tension: 0, friction: 26 },
+    polar: [-Math.PI / 3, Math.PI / 3],
+    config: { mass: 1, tension: 170, friction: 26 },
   };
 
   return (
-    <>
-      <PresentationControls {...controlsConfig}>
-        <group ref={largeMacBookRef}>
-          <MacBookModel16 scale={modelScale.large} />
-        </group>
-      </PresentationControls>
+    <PresentationControls {...controlsConfig}>
+      <group ref={largeMacBookRef}>
+        <MacBookModel16 scale={modelScale.large} />
+      </group>
 
-      <PresentationControls {...controlsConfig}>
-        <group ref={smallMacBookRef}>
-          <MacBookModel14 scale={modelScale.small} />
-        </group>
-      </PresentationControls>
-    </>
+      <group ref={smallMacBookRef}>
+        <MacBookModel14 scale={modelScale.small} />
+      </group>
+    </PresentationControls>
   );
 };
 
