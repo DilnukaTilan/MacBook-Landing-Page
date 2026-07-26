@@ -1,16 +1,12 @@
 import { useRef } from "react";
-import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Showcase = () => {
   const sectionRef = useRef(null);
-  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
   useGSAP(
     () => {
-      if (isTablet) return;
-
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -34,7 +30,7 @@ const Showcase = () => {
           "<60%",
         );
     },
-    { dependencies: [isTablet], scope: sectionRef, revertOnUpdate: true },
+    { scope: sectionRef },
   );
 
   return (

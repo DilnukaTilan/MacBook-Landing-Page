@@ -303,12 +303,6 @@ body {
           transform-origin: center;
           transform: scale(80);
         }
-
-        @media (max-width: 1024px) {
-          img {
-            transform: scale(1);
-          }
-        }
       }
     }
 
