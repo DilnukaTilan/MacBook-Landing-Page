@@ -1,9 +1,12 @@
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
+import ChipOverview from "./components/ChipOverview";
 import ProductViewer from "./components/ProductViewer";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Showcase from "./components/Showcase";
+import Features from "./components/Features";
+import Highlights from "./components/Highlights";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,8 +15,11 @@ const App = () => {
     <main>
       <NavBar />
       <Hero />
+      <ChipOverview />
       <ProductViewer />
       <Showcase />
+      <Features />
+      <Highlights />
     </main>
   );
 };

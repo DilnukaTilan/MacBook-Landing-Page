@@ -31,6 +31,39 @@ const noChangeParts = [
   "Object_10",
 ];
 
+const Text_1 =
+  "M4 brings phenomenal performance to the new 14-inch MacBook Pro, from creative tasks to even more demanding workloads such as rendering complex scenes in Blender.";
+
+const Text_2 =
+  "MacBook Pro features a new 12MP Center Stage camera, which keeps users centered in the frame, and supports Desk View, which adds a whole new dimension to video calls.";
+
+const Text_3 =
+  "With up to 2x faster read/write performance, reaching speeds of up to 14.5GB/s, the new MacBook Pro accelerates workflows for professionals working across 4K and 8K video projects.";
+
+const featureSlides = [
+  {
+    id: 1,
+    title: "Phenomenal Performance",
+    subtitle: "M4 Silicon",
+    text: Text_1,
+    video: "/videos/video1.mp4",
+  },
+  {
+    id: 2,
+    title: "12MP Center Stage",
+    subtitle: "Advanced Camera",
+    text: Text_2,
+    video: "/videos/video2.mp4",
+  },
+  {
+    id: 3,
+    title: "Up to 14.5GB/s Speed",
+    subtitle: "Next-Gen Storage",
+    text: Text_3,
+    video: "/videos/video3.mp4",
+  },
+];
+
 const footerLinks = [
   { label: "Privacy Policy", link: "#" },
   { label: "Terms of Use", link: "#" },
@@ -39,4 +72,12 @@ const footerLinks = [
   { label: "Site Map", link: "#" },
 ];
 
-export { footerLinks, navLinks, noChangeParts };
+export {
+  Text_1,
+  Text_2,
+  Text_3,
+  featureSlides,
+  footerLinks,
+  navLinks,
+  noChangeParts,
+};
