@@ -240,14 +240,14 @@ body {
     }
 
     .controls {
-      @apply relative z-50 flex flex-col items-center gap-3 -mt-20 sm:-mt-40;
+      @apply relative z-50 flex flex-col items-center gap-3 -mt-20 sm:-mt-40 pointer-events-none;
 
       .info {
-        @apply text-xs text-white bg-black/20 px-2 py-1 rounded-lg text-center;
+        @apply text-xs text-white bg-black/20 px-2 py-1 rounded-lg text-center pointer-events-auto;
       }
 
       .color-control {
-        @apply flex-between bg-neutral-800 rounded-full px-4 py-2.5 gap-3;
+        @apply flex-between bg-neutral-800 rounded-full px-4 py-2.5 gap-3 pointer-events-auto;
 
         button {
           @apply size-7 rounded-full cursor-pointer border-0 outline-none focus-visible:ring-4 focus-visible:ring-primary;
@@ -259,7 +259,7 @@ body {
       }
 
       .size-control {
-        @apply small-medium flex-between bg-neutral-800 rounded-full px-4 py-2.5 gap-2;
+        @apply small-medium flex-between bg-neutral-800 rounded-full px-4 py-2.5 gap-2 pointer-events-auto;
 
         button {
           @apply size-8 rounded-full cursor-pointer bg-white text-black flex-center border-0 outline-none focus-visible:ring-4 focus-visible:ring-primary;
@@ -268,7 +268,7 @@ body {
     }
 
     #canvas {
-      @apply !w-full !h-[420px] sm:!h-[520px] lg:!h-[640px] relative z-40;
+      @apply !w-full !h-[420px] sm:!h-[520px] lg:!h-[640px] relative z-40 touch-none;
     }
   }
 
